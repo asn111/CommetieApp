@@ -99,7 +99,7 @@ extension MonthsViewController : UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as? CommetieViewController
             let transition = CATransition()
             transition.duration = 0.5
             transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)

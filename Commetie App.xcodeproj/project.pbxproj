@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29D68E6A2667D725001A0193 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D68E692667D725001A0193 /* AppDelegate.swift */; };
-		29D68E6E2667D725001A0193 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D68E6D2667D725001A0193 /* ViewController.swift */; };
+		29D68E6E2667D725001A0193 /* CommetieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D68E6D2667D725001A0193 /* CommetieViewController.swift */; };
 		29D68E712667D725001A0193 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D68E6F2667D725001A0193 /* Main.storyboard */; };
 		29D68E742667D725001A0193 /* Commetie_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29D68E722667D725001A0193 /* Commetie_App.xcdatamodeld */; };
 		29D68E762667D728001A0193 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29D68E752667D728001A0193 /* Assets.xcassets */; };
@@ -29,7 +29,7 @@
 		05D8440997FC0755B29C6C8B /* Pods_Commetie_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Commetie_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D68E662667D725001A0193 /* Commetie App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Commetie App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D68E692667D725001A0193 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		29D68E6D2667D725001A0193 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29D68E6D2667D725001A0193 /* CommetieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommetieViewController.swift; sourceTree = "<group>"; };
 		29D68E702667D725001A0193 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29D68E732667D725001A0193 /* Commetie_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Commetie_App.xcdatamodel; sourceTree = "<group>"; };
 		29D68E752667D728001A0193 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				29D68E692667D725001A0193 /* AppDelegate.swift */,
-				29D68E6D2667D725001A0193 /* ViewController.swift */,
+				29D68E6D2667D725001A0193 /* CommetieViewController.swift */,
 				29D68E882668B11A001A0193 /* MonthsViewController.swift */,
 				29D68E90266A1315001A0193 /* AppFunctions.swift */,
 				29D68E6F2667D725001A0193 /* Main.storyboard */,
@@ -237,7 +237,7 @@
 			files = (
 				29D68E892668B11A001A0193 /* MonthsViewController.swift in Sources */,
 				29D68E742667D725001A0193 /* Commetie_App.xcdatamodeld in Sources */,
-				29D68E6E2667D725001A0193 /* ViewController.swift in Sources */,
+				29D68E6E2667D725001A0193 /* CommetieViewController.swift in Sources */,
 				29D68E91266A1315001A0193 /* AppFunctions.swift in Sources */,
 				29D68E822668A6F4001A0193 /* AllTVCell.swift in Sources */,
 				29D68E862668AF2D001A0193 /* MonthsCVCell.swift in Sources */,
