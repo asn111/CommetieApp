@@ -15,6 +15,11 @@ class AllTVCell: UITableViewCell {
     @IBOutlet weak var CashCBBtn: UIButton!
     @IBOutlet weak var dateLbl: UILabel!
     
+    @IBOutlet weak var allThingsView: UIView!
+    @IBOutlet weak var memberView: UIView!
+    @IBOutlet weak var memberNameLbl: UILabel!
+    
+    
     override func prepareForReuse() {
         super.prepareForReuse()
     }

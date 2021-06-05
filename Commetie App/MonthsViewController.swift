@@ -12,19 +12,23 @@ class MonthsViewController: UIViewController {
 
     @IBOutlet weak var monthsCV: UICollectionView!
     
-    var monthsNameList = ["June 2021","July 2021","August 2021","September 2021","October 2021","November 2021", "December 2021", "Jaunary 2022","Febuaray 2022","March 2022","April 2022"]
-    var candidateNameList : [String:Any] = ["Ahsan": "100",
-                                            "Bilal": "100",
-                                            "Imran": "100",
-                                            "Mansoor": "100",
-                                            "Mudassir": "100",
-                                            "Touseef": "100",
-                                            "Talal": "100",
-                                            "Waqar": "100",
-                                            "Asad": "100",
-                                            "Mohsin": "100",
-                                            "Mani": "100",
-                                            "Shakoor": "100"]
+    var monthsNameList : [String:Any] = ["June 2021":" 1st -- Shakeela","July 2021":"2nd -- Rehana","August 2021":"3rd -- Neelum","September 2021":"4th -- Azra & Rakshanda","October 2021":"5th -- Mahjabeen","November 2021":"6th -- Abida, Aroosa, Mrs Malik", "December 2021":"7th -- Rida & Daneen", "Jaunary 2022":"8th -- Shazia & Husnain","Febuaray 2022":"9th -- Noreen & Shela","March 2022":"10th -- Nishat, Mahjabeen, Ruqaiya","April 2022":"11th -- Hina, Mani & Neelum"]
+    var candidateNameList : [String:Any] = ["Shakeela": "20000",
+                                            "Rehana": "20000",
+                                            "Neelum": "25000",
+                                            "Azra": "10000",
+                                            "Rakshanda": "10000",
+                                            "Mahjabeen": "25000",
+                                            "Abida": "5000",
+                                            "Aroosa": "5000",
+                                            "Mrs Malik": "10000",
+                                            "Shazia": "40000",
+                                            "Noreen": "10000",
+                                            "Nishat": "5000",
+                                            "Ruqaiya": "10000",
+                                            "Hina": "10000",
+                                            "Mani": "5000",
+                                            "Shela": "10000"]
 
     var candList = List<Candidate>()
     var monthsList : Results<MonthsModel>!
@@ -50,13 +54,14 @@ class MonthsViewController: UIViewController {
                     cand.cID = Candidate.incrementaIDs()
                     cand.cName = candis.key
                     cand.paymentAmount = candis.value as! String
-                    cand.paymentMonth = months
+                    cand.paymentMonth = months.key
                     create_Candidate(candidate: cand)
                     candsArray.append(cand)
                 }
                 
                 month.mID = MonthsModel.incrementaIDs()
-                month.mName = months
+                month.mName = months.key
+                month.memberName = months.value as! String
                 month.candidates = candsArray
                 create_MonthsList(months: month)
             }

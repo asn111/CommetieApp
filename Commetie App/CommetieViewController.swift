@@ -188,26 +188,34 @@ extension CommetieViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return candidateList.count + 1
+        return candidateList.count + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row == candidateList.count {
+        if indexPath.row == candidateList.count  {
             let amountViewCell : HeaderTVCell = tableView.dequeueReusableCell(withIdentifier: "HeaderTVCell", for: indexPath) as! HeaderTVCell
             
             amountViewCell.viewModel = monthList.first
             
             return amountViewCell
+        } else if indexPath.row == candidateList.count + 1 {
+            let amountViewCell : AllTVCell = tableView.dequeueReusableCell(withIdentifier: "AllTVCell", for: indexPath) as! AllTVCell
+            
+            amountViewCell.memberView.isHidden = false
+            amountViewCell.memberNameLbl.text = monthList.first?.memberName
+            
+            return amountViewCell
         } else {
             let cell : AllTVCell = tableView.dequeueReusableCell(withIdentifier: "AllTVCell", for: indexPath) as! AllTVCell
+            cell.memberView.isHidden = true
             cell.bankCBBtn.addTarget(self, action: #selector(btnPressedB(sender:)), for: .touchUpInside)
             cell.CashCBBtn.addTarget(self, action: #selector(btnPressedC(sender:)), for: .touchUpInside)
             
-            cell.bankCBBtn.tag = indexPath.row
-            cell.CashCBBtn.tag = indexPath.row
+            cell.bankCBBtn.tag = (indexPath.row)
+            cell.CashCBBtn.tag = (indexPath.row )
             
-            cell.nameLbl.text = candidateList[indexPath.row].cName
+            cell.nameLbl.text = "\(candidateList[indexPath.row].cName)\n\(candidateList[indexPath.row].paymentAmount)"
             
             if candidateList[indexPath.row].cPaymentMethod == "" {
                 cell.bankCBBtn.setImage(UIImage(named: "Unchecked-Checkbox"), for: .normal)
@@ -237,7 +245,7 @@ extension CommetieViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderTVCell") as! HeaderTVCell
-
+        headerCell.amountDetailView.isHidden = true
         return headerCell
     }
     

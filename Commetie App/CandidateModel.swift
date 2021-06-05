@@ -13,6 +13,7 @@ class MonthsModel: Object {
     @objc dynamic var mName : String = ""
     @objc dynamic var bankAmount : Int = 0
     @objc dynamic var cashAmount : Int = 0
+    @objc dynamic var memberName : String = ""
     @objc dynamic var totalCollection : Int = 0
     var candidates = List<Candidate>()
 
