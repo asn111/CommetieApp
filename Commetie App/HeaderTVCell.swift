@@ -10,19 +10,9 @@ import UIKit
 class HeaderTVCell: UITableViewCell {
 
     @IBOutlet weak var headerView: UIView!
-    @IBOutlet weak var amountDetailView: UIView!
-    
-    @IBOutlet weak var bankAmountLbl: UILabel!
-    @IBOutlet weak var cashAmountLbl: UILabel!
-    @IBOutlet weak var totalAmountLbl: UILabel!
-    
+
     //MARK: Properties
     
-    var viewModel: MonthsModel? {
-        didSet{
-            bindViewModel()
-        }
-    }
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -40,17 +30,6 @@ class HeaderTVCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    
-    func bindViewModel() {
-        if let viewModel = viewModel {
-                headerView.isHidden = true
-                amountDetailView.isHidden = false
-            
-            bankAmountLbl.text = "\(viewModel.bankAmount)"
-            cashAmountLbl.text = "\(viewModel.cashAmount)"
-            totalAmountLbl.text = "Total\n\(viewModel.totalCollection)\nPKR"
-        }
     }
     
 }

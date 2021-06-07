@@ -19,6 +19,17 @@ class AllTVCell: UITableViewCell {
     @IBOutlet weak var memberView: UIView!
     @IBOutlet weak var memberNameLbl: UILabel!
     
+    @IBOutlet weak var amountDetailView: UIView!
+    @IBOutlet weak var bankAmountLbl: UILabel!
+    @IBOutlet weak var cashAmountLbl: UILabel!
+    @IBOutlet weak var totalAmountLbl: UILabel!
+    
+    var viewModel: MonthsModel? {
+        didSet{
+            bindViewModel()
+        }
+    }
+    
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -34,6 +45,17 @@ class AllTVCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func bindViewModel() {
+        if let viewModel = viewModel {
+            allThingsView.isHidden = true
+            amountDetailView.isHidden = false
+            
+            bankAmountLbl.text = "\(viewModel.bankAmount)"
+            cashAmountLbl.text = "\(viewModel.cashAmount)"
+            totalAmountLbl.text = "Total\n\(viewModel.totalCollection)\nPKR"
+        }
     }
     
 }

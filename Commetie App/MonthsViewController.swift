@@ -12,7 +12,7 @@ class MonthsViewController: UIViewController {
 
     @IBOutlet weak var monthsCV: UICollectionView!
     
-    var monthsNameList : [String:Any] = ["June 2021":" 1st -- Shakeela","July 2021":"2nd -- Rehana","August 2021":"3rd -- Neelum","September 2021":"4th -- Azra & Rakshanda","October 2021":"5th -- Mahjabeen","November 2021":"6th -- Abida, Aroosa, Mrs Malik", "December 2021":"7th -- Rida & Daneen", "Jaunary 2022":"8th -- Shazia & Husnain","Febuaray 2022":"9th -- Noreen & Shela","March 2022":"10th -- Nishat, Mahjabeen, Ruqaiya","April 2022":"11th -- Hina, Mani & Neelum"]
+    var monthsNameList : [String:String] = ["June 2021":" 1st -- Shakeela","July 2021":"2nd -- Rehana","August 2021":"3rd -- Neelum","September 2021":"4th -- Azra & Rakshanda","October 2021":"5th -- Mahjabeen","November 2021":"6th -- Abida, Aroosa, Mrs Malik", "December 2021":"7th -- Rida & Daneen", "Jaunary 2022":"8th -- Shazia & Husnain","Febuaray 2022":"9th -- Noreen & Shela","March 2022":"10th -- Nishat, Mahjabeen, Ruqaiya","April 2022":"11th -- Hina, Mani & Neelum"]
     var candidateNameList : [String:Any] = ["Shakeela": "20000",
                                             "Rehana": "20000",
                                             "Neelum": "25000",
@@ -45,6 +45,7 @@ class MonthsViewController: UIViewController {
         
         if !AppFunctions.getIsFirstLogin(forKey: isFirstLogin) {
             Logs.value(message: "::FALSE VAL::")
+            
             for months in monthsNameList {
                 let month = MonthsModel()
                 let candsArray = List<Candidate>()
@@ -61,7 +62,7 @@ class MonthsViewController: UIViewController {
                 
                 month.mID = MonthsModel.incrementaIDs()
                 month.mName = months.key
-                month.memberName = months.value as! String
+                month.memberName = months.value 
                 month.candidates = candsArray
                 create_MonthsList(months: month)
             }

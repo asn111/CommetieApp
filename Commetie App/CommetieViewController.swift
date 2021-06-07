@@ -36,6 +36,7 @@ class CommetieViewController: UIViewController {
         
         allThingsTV.register(UINib(nibName: "AllTVCell", bundle: nil), forCellReuseIdentifier: "AllTVCell")
         allThingsTV.register(UINib(nibName: "HeaderTVCell", bundle: nil), forCellReuseIdentifier: "HeaderTVCell")
+        //allThingsTV.register(UINib(nibName: "HeaderTVCell", bundle: nil), forHeaderFooterViewReuseIdentifier: "HeaderTVCell")
 
     }
     
@@ -194,7 +195,7 @@ extension CommetieViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == candidateList.count  {
-            let amountViewCell : HeaderTVCell = tableView.dequeueReusableCell(withIdentifier: "HeaderTVCell", for: indexPath) as! HeaderTVCell
+            let amountViewCell : AllTVCell = tableView.dequeueReusableCell(withIdentifier: "AllTVCell", for: indexPath) as! AllTVCell
             
             amountViewCell.viewModel = monthList.first
             
@@ -209,6 +210,8 @@ extension CommetieViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             let cell : AllTVCell = tableView.dequeueReusableCell(withIdentifier: "AllTVCell", for: indexPath) as! AllTVCell
             cell.memberView.isHidden = true
+            cell.amountDetailView.isHidden = true
+            cell.allThingsView.isHidden = false
             cell.bankCBBtn.addTarget(self, action: #selector(btnPressedB(sender:)), for: .touchUpInside)
             cell.CashCBBtn.addTarget(self, action: #selector(btnPressedC(sender:)), for: .touchUpInside)
             
@@ -245,8 +248,9 @@ extension CommetieViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderTVCell") as! HeaderTVCell
-        headerCell.amountDetailView.isHidden = true
-        return headerCell
+        //let headerCell = tableView.dequeueReusableHeaderFooterView(withIdentifier:"HeaderTVCell") as! HeaderTVCell
+
+        return headerCell.contentView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
