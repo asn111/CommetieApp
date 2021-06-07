@@ -11,7 +11,7 @@ import RealmSwift
 class MonthsViewController: UIViewController {
 
     @IBOutlet weak var monthsCV: UICollectionView!
-    
+    var tempMonthsNameList = [String:String]()
     var monthsNameList : [String:String] = ["June 2021":" 1st -- Shakeela","July 2021":"2nd -- Rehana","August 2021":"3rd -- Neelum","September 2021":"4th -- Azra & Rakshanda","October 2021":"5th -- Mahjabeen","November 2021":"6th -- Abida, Aroosa, Mrs Malik", "December 2021":"7th -- Rida & Daneen", "Jaunary 2022":"8th -- Shazia & Husnain","Febuaray 2022":"9th -- Noreen & Shela","March 2022":"10th -- Nishat, Mahjabeen, Ruqaiya","April 2022":"11th -- Hina, Mani & Neelum"]
     var candidateNameList : [String:Any] = ["Shakeela": "20000",
                                             "Rehana": "20000",
@@ -42,7 +42,7 @@ class MonthsViewController: UIViewController {
         monthsCV.register(UINib(nibName: "MonthsCVCell", bundle: nil), forCellWithReuseIdentifier: "MonthsCVCell")
 
         doTheRealmThing()
-        
+
         if !AppFunctions.getIsFirstLogin(forKey: isFirstLogin) {
             Logs.value(message: "::FALSE VAL::")
             
@@ -59,11 +59,18 @@ class MonthsViewController: UIViewController {
                     create_Candidate(candidate: cand)
                     candsArray.append(cand)
                 }
+
+                
+
                 
                 month.mID = MonthsModel.incrementaIDs()
                 month.mName = months.key
                 month.memberName = months.value 
                 month.candidates = candsArray
+                if let number = Int(months.value.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()) {
+                    month.mOrder = number
+                    Logs.value(message: "VAL:: \(number)")
+                }
                 create_MonthsList(months: month)
             }
         }
@@ -72,7 +79,7 @@ class MonthsViewController: UIViewController {
     
     func doTheRealmThing(){
         let realm = try! Realm()
-        monthsList = realm.objects(MonthsModel.self)
+        monthsList = realm.objects(MonthsModel.self).sorted(byKeyPath: "mOrder", ascending: true)
     }
     
     func create_Candidate(candidate: Candidate) {

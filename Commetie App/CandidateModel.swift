@@ -10,6 +10,7 @@ import RealmSwift
 
 class MonthsModel: Object {
     @objc dynamic var mID : Int = 0
+    @objc dynamic var mOrder : Int = 0
     @objc dynamic var mName : String = ""
     @objc dynamic var bankAmount : Int = 0
     @objc dynamic var cashAmount : Int = 0
