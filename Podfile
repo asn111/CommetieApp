@@ -6,7 +6,7 @@ target 'Commetie App' do
   use_frameworks!
   pod 'RealmSwift'
   pod "RxRealm"
-  pod 'SwiftDate', '~> 5.0'
+  pod 'SwiftDate'
 
   # Pods for Commetie App
 

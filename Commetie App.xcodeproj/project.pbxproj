@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,11 +22,10 @@
 		29D68E8D2668C304001A0193 /* HeaderTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29D68E8B2668C304001A0193 /* HeaderTVCell.xib */; };
 		29D68E8F2668FC40001A0193 /* CandidateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D68E8E2668FC40001A0193 /* CandidateModel.swift */; };
 		29D68E91266A1315001A0193 /* AppFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D68E90266A1315001A0193 /* AppFunctions.swift */; };
-		332C216529B0245E340DC904 /* Pods_Commetie_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D8440997FC0755B29C6C8B /* Pods_Commetie_App.framework */; };
+		3813A1948E5AEBCBEE2042C7 /* Pods_Commetie_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EBE0DD61FF8CE8840F2507B /* Pods_Commetie_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		05D8440997FC0755B29C6C8B /* Pods_Commetie_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Commetie_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D68E662667D725001A0193 /* Commetie App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Commetie App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D68E692667D725001A0193 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29D68E6D2667D725001A0193 /* CommetieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommetieViewController.swift; sourceTree = "<group>"; };
@@ -44,8 +43,9 @@
 		29D68E8B2668C304001A0193 /* HeaderTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTVCell.xib; sourceTree = "<group>"; };
 		29D68E8E2668FC40001A0193 /* CandidateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateModel.swift; sourceTree = "<group>"; };
 		29D68E90266A1315001A0193 /* AppFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFunctions.swift; sourceTree = "<group>"; };
-		8FF24483ED5730D6B227B58A /* Pods-Commetie App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Commetie App.debug.xcconfig"; path = "Target Support Files/Pods-Commetie App/Pods-Commetie App.debug.xcconfig"; sourceTree = "<group>"; };
-		FA1120A282082871C7B07333 /* Pods-Commetie App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Commetie App.release.xcconfig"; path = "Target Support Files/Pods-Commetie App/Pods-Commetie App.release.xcconfig"; sourceTree = "<group>"; };
+		3E255A380C2998D11AE82E05 /* Pods-Commetie App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Commetie App.debug.xcconfig"; path = "Target Support Files/Pods-Commetie App/Pods-Commetie App.debug.xcconfig"; sourceTree = "<group>"; };
+		9EBE0DD61FF8CE8840F2507B /* Pods_Commetie_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Commetie_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1BE622D0F5710766D10E022 /* Pods-Commetie App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Commetie App.release.xcconfig"; path = "Target Support Files/Pods-Commetie App/Pods-Commetie App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				332C216529B0245E340DC904 /* Pods_Commetie_App.framework in Frameworks */,
+				3813A1948E5AEBCBEE2042C7 /* Pods_Commetie_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,8 +63,8 @@
 		0A910689C752E34088F26CB4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8FF24483ED5730D6B227B58A /* Pods-Commetie App.debug.xcconfig */,
-				FA1120A282082871C7B07333 /* Pods-Commetie App.release.xcconfig */,
+				3E255A380C2998D11AE82E05 /* Pods-Commetie App.debug.xcconfig */,
+				B1BE622D0F5710766D10E022 /* Pods-Commetie App.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -75,7 +75,7 @@
 				29D68E682667D725001A0193 /* Commetie App */,
 				29D68E672667D725001A0193 /* Products */,
 				0A910689C752E34088F26CB4 /* Pods */,
-				AD524D579666D407F589B7CC /* Frameworks */,
+				6744FA49FEDE93E0DEF3BC95 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,10 +110,10 @@
 			path = "Commetie App";
 			sourceTree = "<group>";
 		};
-		AD524D579666D407F589B7CC /* Frameworks */ = {
+		6744FA49FEDE93E0DEF3BC95 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				05D8440997FC0755B29C6C8B /* Pods_Commetie_App.framework */,
+				9EBE0DD61FF8CE8840F2507B /* Pods_Commetie_App.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,11 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29D68E7D2667D728001A0193 /* Build configuration list for PBXNativeTarget "Commetie App" */;
 			buildPhases = (
-				8BA97E06B02E55F22531179B /* [CP] Check Pods Manifest.lock */,
+				3FC21C38D5475DDEF8741BB9 /* [CP] Check Pods Manifest.lock */,
 				29D68E622667D725001A0193 /* Sources */,
 				29D68E632667D725001A0193 /* Frameworks */,
 				29D68E642667D725001A0193 /* Resources */,
-				603D8684684602708A9ACCBE /* [CP] Embed Pods Frameworks */,
+				093D07FCF31E0E154B3E3C8D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,7 +189,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		603D8684684602708A9ACCBE /* [CP] Embed Pods Frameworks */ = {
+		093D07FCF31E0E154B3E3C8D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -206,7 +206,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Commetie App/Pods-Commetie App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8BA97E06B02E55F22531179B /* [CP] Check Pods Manifest.lock */ = {
+		3FC21C38D5475DDEF8741BB9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -387,19 +387,21 @@
 		};
 		29D68E7E2667D728001A0193 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8FF24483ED5730D6B227B58A /* Pods-Commetie App.debug.xcconfig */;
+			baseConfigurationReference = 3E255A380C2998D11AE82E05 /* Pods-Commetie App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8SSXSKZN8Q;
+				DEVELOPMENT_TEAM = 47PF8HPRCT;
 				INFOPLIST_FILE = "Commetie App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "selfIT.Commetie-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "selfIT.Commetie-App3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -407,19 +409,21 @@
 		};
 		29D68E7F2667D728001A0193 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA1120A282082871C7B07333 /* Pods-Commetie App.release.xcconfig */;
+			baseConfigurationReference = B1BE622D0F5710766D10E022 /* Pods-Commetie App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8SSXSKZN8Q;
+				DEVELOPMENT_TEAM = 47PF8HPRCT;
 				INFOPLIST_FILE = "Commetie App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "selfIT.Commetie-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "selfIT.Commetie-App3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

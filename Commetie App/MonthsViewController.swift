@@ -12,23 +12,35 @@ class MonthsViewController: UIViewController {
 
     @IBOutlet weak var monthsCV: UICollectionView!
     var tempMonthsNameList = [String:String]()
-    var monthsNameList : [String:String] = ["June 2021":" 1st -- Shakeela","July 2021":"2nd -- Rehana","August 2021":"3rd -- Neelum","September 2021":"4th -- Azra & Rakshanda","October 2021":"5th -- Mahjabeen","November 2021":"6th -- Abida, Aroosa, Mrs Malik", "December 2021":"7th -- Rida & Daneen", "Jaunary 2022":"8th -- Shazia & Husnain","Febuaray 2022":"9th -- Noreen & Shela","March 2022":"10th -- Nishat, Mahjabeen, Ruqaiya","April 2022":"11th -- Hina, Mani & Neelum"]
-    var candidateNameList : [String:Any] = ["Shakeela": "20000",
-                                            "Rehana": "20000",
-                                            "Neelum": "25000",
-                                            "Azra": "10000",
-                                            "Rakshanda": "10000",
-                                            "Mahjabeen": "25000",
-                                            "Abida": "5000",
-                                            "Aroosa": "5000",
-                                            "Mrs Malik": "10000",
-                                            "Shazia": "40000",
-                                            "Noreen": "10000",
-                                            "Nishat": "5000",
-                                            "Ruqaiya": "10000",
-                                            "Hina": "10000",
-                                            "Mani": "5000",
-                                            "Shela": "10000"]
+    var monthsNameList : [String:String] = ["May 2025":" 1st -- Shakeela",
+                                            "June 2025":"2nd -- Neelum (Shehzad)",
+                                            "July 2025":"3rd -- Ammna",
+                                            "August 2025":"4th -- Sameena",
+                                            "September 2025":"5th -- Mani + Waqar + Sana",
+                                            "October 2025":"6th -- Hifza + Faiza + Areej",
+                                            "November 2025":"7th -- Saddaf",
+                                            "December 2025":"8th -- Hina",
+                                            "January 2026":"9th -- Naheeda + Mani",
+                                            "February 2026":"10th -- Sidra + Tasleem + Mani",
+                                            "March 2026":"11th -- Zareena",
+                                            "April 2026":"12th -- Neelum(Badar)",
+                                            "May 2026":"12th -- Neelum (Hamza)"]
+    
+    var candidateNameList : [String:Any] = ["Neelum":"150000",
+                                            "Shakeela": "100000",
+                                            "Sameena": "50000",
+                                            "Zareena":"50000",
+                                            "Saddaf":"50000",
+                                            "Hina":"50000",
+                                            "Naheeda":"40000",
+                                            "Mani":"35000",
+                                            "Hifza":"30000",
+                                            "Sidra":"30000",
+                                            "Waqar":"25000",
+                                            "Faiza":"10000",
+                                            "Areej":"10000",
+                                            "Tasleem":"10000",
+                                            "Sana":"10000"]
 
     var candList = List<Candidate>()
     var monthsList : Results<MonthsModel>!
